@@ -116,44 +116,55 @@ That Shape the Future
     </div>
 <div id="services1">
     <div href="carpetCleaning.html">
-      <img src="images/material-symbols_engineering-outline.png" alt="">
-    <p><i>Engineering</i></p>  
+      <img src="images/Background+Shadow.png" alt="">
 <h3>Engineering Support Services</h3>
-<p>Delivering cutting-edge engineering solutions tailored to your needs.</p>
     </div>
 
     <div >
-      <img src="images/carbon_navaid-military-civil.png" alt="">
-     <p><i>Construction</i></p> 
+      <img src="images/Background+Shadow (1).png" alt="">
      <h3>Civil Construction Projects</h3> 
-     <p>Building infrastructure that stands the test of time.</p> 
     </div>
 
     <div >
-      <img src="images/ant-design_safety-outlined.png" alt="">
-      <p><i>Safety</i></p>
+      <img src="images/Background+Shadow (2).png" alt="">
 <h3>Safety & Security Engineering</h3>
-<p>Ensuring safety and security for people and projects.</p>
     </div>
 
     <div >
-      <img src="images/carbon_scis-transparent-supply.png" alt="">
-      <p><i>Procurement</i></p>
+      <img src="images/Background+Shadow (3).png" alt="">
 <h3>Procurement & Supply Chain Management</h3>
-<p>Sourcing quality materials efficiently.</p>
     </div>
     <div >
-      <img src="images/hugeicons_ai-computer.png" alt="">
-      <p><i>ICT </i></p>
+      <img src="images/Background+Shadow (4).png" alt="">
      <h3> ICT Infrastructure Solutions</h3>
-     <p>Empowering businesses with modern technology systems.</p> 
     </div>
 
     <div >
-      <img src="images/hugeicons_wind-power.png" alt="">
-     <p><i>Technical</i></p> 
+      <img src="images/Background+Shadow (5).png" alt="">
 <h3>Technical Manpower Services</h3>
-<p>Supplying skilled professionals for critical projects.</p>
+    </div>
+
+    <div >
+      <img src="images/Background+Shadow (6).png" alt="">
+     <h3>Equipment Leasing</h3> 
+    </div>
+
+    <div >
+      <img src="images/Background+Shadow (7).png" alt="">
+     <h3>Project Management</h3> 
+    </div>
+
+    <div >
+      <img src="images/Background+Shadow (8).png" alt="">
+     <h3>QA/QC Services</h3> 
+    </div>
+    <div >
+      <img src="images/Background+Shadow (9).png" alt="">
+     <h3>Inspection Services</h3> 
+    </div>
+    <div >
+      <img src="images/Background+Shadow (10).png" alt="">
+     <h3>Operations & Maintenance Services</h3> 
     </div>
   </div>
 </div>
@@ -205,12 +216,32 @@ John Harris
   <h3>Contact Us</h3>
  <p style="color: #888888;">We’d love to hear from you! Whether you have a project in mind, need more information, or want to work with us, feel free to reach out.
 </p>
-<form action="">
-  <div><input type="text" name="" id="" placeholder="Your Name"></div>
-  <div><input type="email" name="" id="" placeholder="Your Email"></div>
+<form action="mailto:info@getomglobal.com" method="GET" onsubmit="return handleEmail()">
+  <div><input type="text" name="" id="name" placeholder="Your Name"></div>
+  <div><input type="email" name="" id="email" placeholder="Your Email"></div>
+  <div><textarea name="" id="message" placeholder="Your message"></textarea></div>
   <div> <button type="submit">Submit</button></div>
-
 </form>
+<script>
+  function handleEmail() {
+    const fullname = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    
+    if (fullname && email && message) {
+        const subject = `Support Request from ${fullname}`;
+        const body = `Name: ${fullname}\nEmail: ${email}\nMessage:\n${message}`;
+        const mailtoLink = `mailto:info@getomglobal.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        window.location.href = mailtoLink;
+        return false; // Prevent the default form submission behavior
+    } else {
+        alert("Please fill out all fields before submitting.");
+        return false;
+    }
+}
+
+</script>
 </div>
 
 
